@@ -1,0 +1,495 @@
+    /* 전체 body 스타일 */
+    body {
+        font-family: 'Gothic A1', sans-serif; /* Gothic A1 웹 폰트 사용 */
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    
+    /* 헤더 스타일 */
+    header {
+        background-color: #303E4F;
+        color: white;
+        padding: 5px;
+        position: relative; /* z-index가 작동하려면 position 속성이 필요합니다. */
+        z-index: 10; /* 메뉴가 열릴 때 로고가 가려지지 않도록 z-index 값을 적절히 설정합니다. */
+    }
+    
+    /* 헤더 내부 컨테이너 */
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    /* 네비게이션 스타일 */
+    nav {
+        background-color: #666;
+        color: white;
+        height: 100%; /* 헤더의 높이와 동일하게 설정 */
+        text-align: center;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%; /* 헤더의 높이와 동일하게 설정 */
+        padding: 0 0px; /* 좌우 패딩을 조정하여 좀 더 여백을 확보합니다. */
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    /* 메인 콘텐츠 스타일 */
+    main {
+        padding: 20px;
+        min-height: calc(100vh - 60px - 60px); /* footer와 header의 높이를 제외한 남은 공간을 main의 최소 높이로 설정 */
+
+    }
+    
+    /* 섹션 스타일 */
+    .section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #introduction {
+        background-color: #36646A;
+        color: white;
+    }
+    
+    #projects {
+        background-color: #C9C9C7;
+        color: white;
+    }
+    
+/* 푸터 스타일 */
+/* 푸터 스타일 */
+#footer {
+    background-color: #303E4F;
+    color: white;
+    padding: 10px;
+    text-align: center; /* 가운데 정렬 추가 */
+
+    bottom: 0; /* 화면 하단에 위치하도록 설정 */
+    width: 100%; /* 전체 너비를 차지하도록 설정 */
+}
+
+
+.contact {
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+}
+
+.contact h3 {
+    font-size: 20px; /* 헤더 크기 조정 */
+    margin-bottom: 10px; /* 아래쪽 여백 추가 */
+}
+
+.contact p {
+    font-size: 16px; /* 텍스트 크기 조정 */
+}
+
+.icons {
+    margin-top: 20px; /* 위쪽 여백 추가 */
+}
+
+.icons li {
+    display: inline-block; /* 아이콘들을 가로로 나열 */
+    margin-right: 10px; /* 오른쪽 여백 추가 */
+}
+
+.icons li:last-child {
+    margin-right: 0; /* 마지막 아이콘의 오른쪽 여백 제거 */
+}
+
+.icons a {
+    font-size: 24px; /* 아이콘 크기 조절 */
+}
+
+.menu {
+    list-style-type: none; /* 메뉴 항목들의 리스트 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+}
+
+.menu li {
+    display: inline; /* 메뉴 항목들을 가로로 나열 */
+    margin-right: 20px; /* 오른쪽 여백 추가 */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* 마지막 메뉴 항목의 오른쪽 여백 제거 */
+}
+
+    
+    /*반응형 메뉴*/
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #303E4F;
+        color: #fff;
+        padding: 10px 20px;
+    }
+    
+    /* 네비게이션 메뉴 스타일 */
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        background-color: #303E4F;
+        z-index: 9; /* 메뉴의 z-index를 로고보다 낮게 설정*/
+    }
+    
+    .menu li {
+        margin-right: 80px;
+    }
+    
+    .menu li:last-child {
+        margin-right: 0;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .navbar-toggle {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    
+    /* 반응형 스타일 */
+    @media screen and (max-width: 768px) {
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: fixed; /* 변경: absolute에서 fixed로 변경 */
+            top: 60px; /* 헤더 높이에 맞춰 조정 */
+            left: 0; /* 변경: 화면 왼쪽부터 시작 */
+            width: 100%; /* 변경: 전체 화면 너비를 사용 */
+            background-color: #e27878;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1000; /* 메뉴가 다른 요소들 위에 나타나도록 z-index 설정 */
+        }
+    
+        .menu.active {
+            display: flex;
+        }
+    
+        .menu li {
+            margin-bottom: 10px;
+            width: 100%; /* 메뉴 항목이 메뉴 너비 전체를 차지하도록 설정 */
+        }
+    
+        .menu a {
+            display: block; /* 링크가 메뉴 항목 전체 영역에 걸쳐 확장되도록 설정 */
+            padding: 10px 20px; /* 클릭하기 쉽도록 패딩 추가 */
+        }
+    
+        .navbar-toggle {
+            display: block; /* 햄버거 버튼이 보이도록 설정 */
+            position: fixed; /* 햄버거 버튼을 화면에 고정 */
+            top: 10px;
+            right: 10px;
+            z-index: 1001; /* 햄버거 버튼이 메뉴 위에 나타나도록 z-index 설정 */
+        }
+    
+        .navbar-toggle.active {
+            display: none;
+        }
+
+        .inner {
+            padding-top: var(--navbar-height-mobile); /* 모바일에서 navbar 높이 조정 */
+        }
+    
+        :root {
+            --navbar-height-mobile: 60px; /* 모바일에서의 navbar 높이 설정 */
+        }
+    }
+    
+    
+    
+    
+    
+    /* 지도 컨테이너 스타일 */
+    #map-container {
+        width: 80%; 
+        margin: 0 auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    
+    /* 지도 컨테이너 크기 조절*/
+    #map {
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    /* 이미지 속성*/
+    .logo {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 auto;
+        display:block;
+    }
+
+/* Button */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+    position: relative;
+    display: block; /* 블록 레벨 요소로 변경 */
+    background: #df7366;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5em;
+    text-decoration: none;
+    padding: 1em 4em; /* 내부 패딩을 늘려서 버튼 크기를 늘립니다. */
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    font-weight: 300;
+    margin: -30px auto 30px; /* 상단 마진을 조정하여 버튼을 위로 올립니다. */
+    /* 나머지 스타일은 그대로 유지 */
+    -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    button:hover,
+    .button:hover {
+        color: #fff;
+        background: #ef8376;
+    }
+
+    input[type="button"].alt,
+    input[type="submit"].alt,
+    input[type="reset"].alt,
+    button.alt,
+    .button.alt {
+        background: #303E4F;
+    }
+
+        input[type="button"].alt:hover,
+        input[type="submit"].alt:hover,
+        input[type="reset"].alt:hover,
+        button.alt:hover,
+        .button.alt:hover {
+            background: #303E4F;
+        }
+        .inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* 네비게이션 바 높이를 빼서 실제로 사용 가능한 높이 계산 */
+            text-align: center;
+        }
+        
+        :root {
+            --navbar-height: 60px; /* navbar의 실제 높이로 설정 */
+        }
+        
+        
+        .center-button {
+            margin-top: 20px; /* 버튼과 텍스트 사이의 간격을 조정합니다. */
+        }
+
+
+        .button {
+            display: block; /* 블록 레벨 요소로 변경 */
+            margin: 10px auto 0; /* 상단에 10px의 마진을 추가하여 버튼을 위로 조금 이동 */
+        }
+
+
+        .dropdown_main {
+            position: relative;
+            display: inline-block;
+            user-select: none;
+        }
+        
+        .dropdown_bar {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .dropdown_bar svg {
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        
+        .dropdown_content {
+            background-color: #DAA520; /* 배경색 변경 */
+            position: absolute;
+            display: none; /* 기본적으로 숨김 */
+            width: 100%;
+            top: 100%;
+            left: 0;
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 그림자 */
+            z-index: 100; /* 충분히 높은 z-index로 설정하여 다른 요소들 위에 표시 */
+        }
+        
+        .dropdown_content a {
+            text-align: left;
+            color: white;
+            padding: 8px 0;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .dropdown_content li {
+            margin: 0; 
+            padding: 10px 20px;
+            list-style: none;
+            line-height: 1.5;
+            text-align: center;
+            display: block;
+        }
+
+        .dropdown_main:hover .dropdown_content {
+            display: block; /* 호버 시 드롭다운 메뉴 보여줌*/
+        }
+        
+        .drop_icon2 {
+            display: none;
+        }
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Bee.html에서만 적용되는 스타일 */
+    .Bee-title {
+        font-size: 45px; /* 원하는 크기로 조정 */
+        margin-bottom: 40px;
+        text-align: center;
+   
+    }
+
+    .Bee-content {
+        font-size: 25px;
+        line-height: 2.5;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+        /* overbreathing.html에서만 적용되는 스타일 */
+    .overbreathing-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .overbreathing-content {
+        font-size: 25px;
+        line-height: 2.5;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+        /* scald.html에서만 적용되는 스타일*/
+    .scald-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .scald-content {
+        font-size: 25px;
+        line-height: 2.5;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+        /* cpr.html에서만 적용되는 스타일 */
+    .cpr-title {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .cpr-subtitle {
+        font-size: 28px;
+        margin-bottom: 6px; /* 아래 간격 조정 */
+        margin-top: 12px; /* 위 간격 조정 */
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: bold;
+    }
+
+    .cpr-content {
+        font-size: 18px;
+        line-height: 1.5;/* 본문내용 간격 조정 */
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
+
+    .quiz-range-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0; /* 상단과 하단 패딩을 10px로 수정 */
+        gap: 10px;
+    }
+    
+    
+    .quiz-range-container button {
+        flex: 1 1 calc(50% - 10px); /* 버튼이 컨테이너의 너비를 골고루 차지하되, 간격을 고려하여 너비를 조정합니다. */
+        font-size: 20px;
+        margin: 0 5px; /* 좌우 여백을 추가합니다. */
+        width: auto; /* 버튼의 너비를 자동으로 설정합니다. */
+    }
+    
+    
