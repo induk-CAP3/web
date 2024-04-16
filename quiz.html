@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="path/to/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <script src="./js/all.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1><img src="image/logo.png" class="logo"></h1>
+
+        <h2>
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="menu" id="menu">
+                        <li><a href="링크부분">AED위치</a></li>
+                        <li><a href="링크부분">응급실 위치</a></li>
+                        <li class="dropdown_main">
+                            <div class="dropdown_bar">응급처치법
+                                <svg class="drop_icon1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                                <svg class="drop_icon2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </div>
+                            <ul class="dropdown_content">
+                                <li><a href="scald.html">화상</a></li>
+                                <li><a href="Bee.html">벌에 쏘였을 때</a></li>
+                                <li><a href="overbreathing.html">과호흡 증후군</a></li>
+                                <li><a href="cpr.html">심폐소생술</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown_main">
+                            <div class="dropdown_bar">응급처치 퀴즈
+                                <svg class="drop_icon1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                                <svg class="drop_icon2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </div>
+                            <ul class="dropdown_content">
+                                <li><a href="scald.html">화상 응급처치 퀴즈</a></li>
+                                <li><a href="Bee.html">벌에 쏘였을 때 퀴즈</a></li>
+                                <li><a href="overbreathing.html">과호흡 증후군 퀴즈</a></li>
+                                <li><a href="cpr.html">심폐소생술 퀴즈</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="링크부분">응급처치 퀴즈</a></li>
+                    </ul>
+                    <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+                </div>
+            </nav>
+        </h2>
+            
+        <script src="js/dropbar.js"></script>
+    </header>
+
+    <main>
+        <div class="quiz-range-container">
+            <button onclick="initQuiz('burn')">화상 응급처치법<br>퀴즈 풀기</button>
+            <button onclick="initQuiz('beeSting')">벌에 쏘였을 때<br>응급처치법 퀴즈 풀기</button>
+            <button onclick="initQuiz('hyperventilation')">과호흡 증후군<br>응급처치법 퀴즈 풀기</button>
+            <button onclick="initQuiz('cpr')">심폐소생술 응급처치법<br>퀴즈 풀기</button>
+        </div>
+        <div id="quiz-container">
+            <!-- 퀴즈 질문과 답변 버튼이 동적으로 생성됩니다 -->
+        </div>
+    </main>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="contact">
+                        <header>
+                            <h3>사이트에 문제가 있나요?</h3>
+                        </header>
+                        <p>사이트에 문제가 있다면 아래 연락처로 연락 주세요</p>
+                        <ul class="icons">
+                            <li><a href="#" class="fab fa-twitter" title="Twitter"><span class="label"></span></a></li>
+                            <li><a href="#" class="fab fa-facebook" title="Facebook"><span class="label"></span></a></li>
+                            <li><a href="#" class="fab fa-square-instagram" title="Instagram"><span class="label"></span></a></li>
+                        </ul>                            
+                    </section>
+                    <div class="copyright">
+                        <ul class="menu">
+                            <li>&copy; 010-0000-0000</li><li>Design: 캡스톤 3조 AED</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll_smooth.js"></script>
+    <script src="js/quizManager.js"></script>
+</body>
+</html>
