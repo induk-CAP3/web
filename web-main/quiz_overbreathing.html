@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="path/to/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <script src="./js/all.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1><img src="LOGO/logo.png" class="logo"></h1>
+
+        <h2>
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="menu" id="menu">
+                        <li><a href="링크부분">AED위치</a></li>
+                        <li><a href="링크부분">응급실 위치</a></li>
+                        <li class="dropdown_main">
+                            <div class="dropdown_bar">응급처치법
+                                <svg class="drop_icon1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                                <svg class="drop_icon2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </div>
+                            <ul class="dropdown_content">
+                                <li><a href="scald.html">화상</a></li>
+                                <li><a href="Bee.html">벌에 쏘였을 때</a></li>
+                                <li><a href="overbreathing.html">과호흡 증후군</a></li>
+                                <li><a href="cpr.html">심폐소생술</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown_main">
+                            <div class="dropdown_bar">응급처치 퀴즈
+                                <svg class="drop_icon1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                                <svg class="drop_icon2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </div>
+                            <ul class="dropdown_content">
+                                <li><a href="quiz_burn.html">화상 응급처치 퀴즈</a></li>
+                                <li><a href="quiz_Bee.html">벌에 쏘였을 때 퀴즈</a></li>
+                                <li><a href="quiz_overbreathing.html">과호흡 증후군 퀴즈</a></li>
+                                <li><a href="quiz_cpr.html">심폐소생술 퀴즈</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+                </div>
+            </nav>
+        </h2>
+            
+        <script src="js/dropbar.js"></script>
+    </header>
+
+    <main>
+        <form id="quiz-form">
+            <div class="quiz-question">
+                <p>1. 과호흡증후군이 발생하면, 환자는 가능한 한 빠르게 물을 마시게 해야 한다.</p>
+                <input type="radio" id="q1_O" name="question1" value="O">
+                <label for="q1_O">O</label>
+                <input type="radio" id="q1_X" name="question1" value="X">
+                <label for="q1_X">X</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. 과호흡증후군 증상이 나타나면, 환자를 안정시키고 꽉 조이는 옷은 느슨하게 해야 한다.</p>
+                <input type="radio" id="q2_O" name="question2" value="O">
+                <label for="q2_O">O</label>
+                <input type="radio" id="q2_X" name="question2" value="X">
+                <label for="q2_X">X</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. 과호흡증후군 증상에는 가슴 통증과 숨쉬기 어려움이 포함될 수 있다.</p>
+                <input type="radio" id="q3_O" name="question3" value="O">
+                <label for="q3_O">O</label>
+                <input type="radio" id="q3_X" name="question3" value="X">
+                <label for="q3_X">X</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>4. 과호흡증후군을 예방하기 위해, 응급 상황시 필요한 약품을 미리 준비해 두는 것이 좋다.</p>
+                <input type="radio" id="q4_O" name="question4" value="O">
+                <label for="q4_O">O</label>
+                <input type="radio" id="q4_X" name="question4" value="X">
+                <label for="q4_X">X</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>5. 과호흡증후군이 발생했을 때, 환자를 자극하는 환경에 그대로 두어야 한다.</p>
+                <input type="radio" id="q5_O" name="question5" value="O">
+                <label for="q5_O">O</label>
+                <input type="radio" id="q5_X" name="question5" value="X">
+                <label for="q5_X">X</label>
+            </div>
+
+            <button type="submit">퀴즈 제출</button>
+        </form>
+
+        <div id="quiz-feedback"></div>
+    </main>
+    
+    <script>
+        function submitQuiz() {
+            const answers = {
+                question1: 'O', // 문제 1의 정답
+                question2: 'X', // 문제 2의 정답
+                // 나머지 문제의 정답도 추가하세요
+            };
+    
+            let score = 0;
+    
+            // 각 문제에 대해 사용자가 선택한 답변을 확인하여 정답과 비교
+            for (const question in answers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+    
+            // 채점 결과를 피드백으로 출력
+            const feedbackContainer = document.getElementById('quiz-feedback');
+            feedbackContainer.innerHTML = `당신의 점수는 ${score}점 입니다.`;
+        }
+    </script>
+    
+    
+    
+    
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="contact">
+                        <header>
+                            <h3>사이트에 문제가 있나요?</h3>
+                        </header>
+                        <p>사이트에 문제가 있다면 아래 연락처로 연락 주세요</p>
+                        <ul class="icons">
+                            <li><a href="#" class="fab fa-twitter" title="Twitter"><span class="label"></span></a></li>
+                            <li><a href="#" class="fab fa-facebook" title="Facebook"><span class="label"></span></a></li>
+                            <li><a href="#" class="fab fa-square-instagram" title="Instagram"><span class="label"></span></a></li>
+                        </ul>                            
+                    </section>
+                    <div class="copyright">
+                        <ul class="menu">
+                            <li>&copy; 010-0000-0000</li><li>Design: 캡스톤 3조 AED</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll_smooth.js"></script>
+    <script src="js/quizManager.js"></script>
+</body>
+</html>
